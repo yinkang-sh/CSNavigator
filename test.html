@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+        }
+
+        body {
+            border: 1px solid rgb(239, 17, 17);
+        }
+
+        #inner {
+            /*no padding*/
+            border: 1px solid blue;
+            margin: 40%;
+            height: 400px;
+            width: 1000px;
+            position: relative;
+        }
+        p {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .static {
+            /* border: 1px dotted rgb(194, 12, 12); */
+            float: left;
+        }
+
+        .abs {
+            border: 1px dotted rgba(27, 3, 7,0.7);
+            background-color: rgba(174, 174, 24,0.7);
+            position: absolute;
+            /* left: 0px; */
+            left : 300px;
+        }
+
+
+        #static-0 {
+            background-color: aqua;
+            margin: 0px;
+            position: relative;
+        }
+        #static-1 {
+            background-color: rgb(193, 196, 47);
+            margin: 0px;
+        }
+        #static-2 {
+            background-color: rgb(2, 173, 116);
+            margin: 0px;
+        }
+
+        #static-0::before{
+            content: "";
+            border-width: 50px 20px;
+            border-color: #4e0e0e;
+            border-style: solid;
+            position: absolute;
+            left: 400px;
+
+            border-color: red;
+            border-left-color: #4e0e0e;
+            border-right-color: blue;
+            border-top-color: green;
+            border-bottom-color: aliceblue;
+
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="inner">
+        <p class = "static" id="static-0">Hello-0</p>
+        <p class = "static" id="static-1">Hello-1</p>
+        <p class = "static" id="static-2">Hello-2</p>
+    </div>
+        
+       
+</body>
+</html>
